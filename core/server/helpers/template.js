@@ -9,6 +9,8 @@ var templates     = {},
 templates.execute = function (name, context) {
     var partial = hbs.handlebars.partials[name];
 
+    console.log('STUFF', name, partial);
+
     if (partial === undefined) {
         errors.logAndThrowError('Template ' + name + ' not found.');
         return;
