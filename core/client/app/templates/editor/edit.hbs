@@ -14,6 +14,11 @@
     <section class="entry-markdown js-entry-markdown {{unless isPreview 'active'}}">
         <header {{action "togglePreview" false}} class="floatingheader">
             <small>Markdown</small>
+            <div class="entry-actions-bar">
+                <button class="action-list" {{action "sendShortcut" "list"}}></button>
+                <button class="action-link" {{action "sendShortcut" "link"}}></button>
+                <button class="action-image" {{action "sendShortcut" "image"}}></button>
+            </div>
             <a class="markdown-help" href="" {{action "openModal" "markdown"}}><span class="hidden">What is Markdown?</span></a>
         </header>
         <section id="entry-markdown-content" class="entry-markdown-content">

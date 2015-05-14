@@ -754,3 +754,46 @@ body.zen {
         text-align: left;
     }
 }
+
+
+//
+// Markdown actions toolbar
+// --------------------------------------------------
+
+.entry-actions-bar {
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    right: -5px;
+    padding: 5px;
+    float: right;
+
+    button {
+        margin-left: 10px;
+
+        &:first-child {
+            margin-left: 5px;
+        }
+    }
+
+    .action-image {
+        @include icon($i-image, '16px', lighten($brown, 15%));
+        &:hover {
+            @include icon($i-image, '', $brown);
+        }
+    }
+
+    .action-link {
+        @include icon($i-link, '16px', lighten($brown, 15%));
+        &:hover {
+            @include icon($i-link, '', $brown);
+        }
+    }
+
+    .action-list {
+        @include icon($i-list, '16px', lighten($brown, 15%));
+        &:hover {
+            @include icon($i-list, '', $brown);
+        }
+    }
+}

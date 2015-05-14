@@ -364,6 +364,10 @@ EditorControllerMixin = Ember.Mixin.create({
             if (this.get('model.isNew')) {
                 this.send('save', {silent: true, disableNProgress: true, backgroundSave: true});
             }
+        },
+
+        sendShortcut: function (shortcut_type) {
+            this.get('editor').shortcut(shortcut_type);
         }
     }
 });
